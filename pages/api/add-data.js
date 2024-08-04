@@ -9,7 +9,7 @@ export default function handler(req, res) {
     const jsonData = fs.readFileSync(filePath);
     const data = JSON.parse(jsonData);
 
-    const newEntry = { title, description, timestamp, isDone: false };
+    const newEntry = { id: data.length + 1, title, description, timestamp, isDone: false };
     data.push(newEntry);
 
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
