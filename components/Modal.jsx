@@ -6,7 +6,7 @@ const Modal = ({ closeModal, handleSubmit, initialTitle = "", initialDesc = "" }
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-        const details = {title, description}
+        const details = { title, description }
         handleSubmit(details);
         closeModal();
     }
@@ -14,7 +14,7 @@ const Modal = ({ closeModal, handleSubmit, initialTitle = "", initialDesc = "" }
         <div className="fixed w-full h-full bg-black bg-opacity-60 flex z-50 items-center justify-center top-0 left-0">
             <div className="w-1/3 bg-white rounded-md p-10">
                 <h4 className='text-lg text-pink-700 font-semibold w-fit'>
-                    {initialTitle ? "Update task:" : "Create a task" }
+                    {initialTitle ? "Update task:" : "Create a task"}
                 </h4>
                 <br />
                 <form onSubmit={handleFormSubmit}>
@@ -29,7 +29,7 @@ const Modal = ({ closeModal, handleSubmit, initialTitle = "", initialDesc = "" }
 
                         />
                         <label
-                            htmlFor='code'
+                            htmlFor='title'
                             className='absolute text-md text-zinc-400 duration-150 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3'
                         >
                             Enter Title
